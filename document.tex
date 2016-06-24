@@ -1,0 +1,92 @@
+\documentclass[11pt,xcolor=dvipsnames]{beamer}
+\usetheme{Amsterdam}
+%\usecolortheme{rose}
+%%%%Load the necessary packages %%%%
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{lmodern}
+\usepackage{siunitx}
+\sisetup{table-number-alignment=right}
+\usepackage[style=numeric,backend=biber,doi=false,isbn=false,sorting=ynt]{biblatex}
+\addbibresource{rickets.bib}
+%%%%%Set color and document specific stuff %%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{frametitle}{\textsc{\insertframetitle}}
+\setbeamercolor{bibliography entry note}{fg=black}
+\newenvironment<>{tealbox}[1]{%
+  \setbeamercolor{block title}{fg=white,bg=teal!75!black}%
+  \begin{block}#2{#1}}{\end{block}}
+  \newenvironment<>{redbox}[1]{%
+  \setbeamercolor{block title}{fg=white,bg=red!75!black}%
+  \begin{block}#2{#1}}{\end{block}}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{Karthik}
+\title{Testing STATA with LaTeX}
+%\subtitle{}
+%\logo{}
+\institute{Jawaharlal Institute of Postgraduate Medical Education and Research}
+%\date{}
+%\subject{}
+%\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{}
+
+\begin{document}
+	\maketitle
+\section{Introduction}	
+	\begin{frame}
+		\frametitle{This is how we test the work}
+		our world works quite well for all the stuff we know to be true.
+	\end{frame}
+\section{Methods}
+\begin{frame}
+	\frametitle{However we do}
+	Our ability to do something like this is quite limited by the fact that our models are clear and easy to understand.
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\begin{center}
+		\epigraph{This seems to be a great idea}{\textit{Karthik Balachandran}}
+	\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\begin{theorem}
+		Testing a theorem
+	\end{theorem}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+This is how we ensured that the work we do is real.	\cite{Allgrove} We also know how this person worked his way to glory.\cite{Glorieux.2014}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Frame Title}
+	This is also a very useful command if you are going to make sure it works. \footfullcite{Linglart.2014}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{An idea of how Knalij works}
+\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=\textwidth]{../../Karthik/Pictures/knalij.PNG}
+		\label{fig:knalij}
+	\end{figure}	
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\begin{redbox}{Good for nothin}
+	Should we play a lot of working thing? I don't know.
+	\end{redbox}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks]	
+			\printbibliography	
+\end{frame}
+
+\end{document}
