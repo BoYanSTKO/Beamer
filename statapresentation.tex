@@ -55,4 +55,13 @@ summarize auto
 \bigskip
 We can easily use the mt code to ensure how this works and perhaps change the word forever.
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile] {This slide shows R code}
+\begin{lstlisting}[language=R,frame=shadowbox,rulesepcolor=\color{gray}]
+library(ggplot2)
+str(diamonds)
+qplot(data=diamonds,x=carat,y=price)+geom_line()
+#This is a comment		
+\end{lstlisting}
+\end{frame}
 \end{document}
