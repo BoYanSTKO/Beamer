@@ -1,0 +1,58 @@
+\documentclass[color=usenames,dvipsnames]{beamer}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{setspace}
+\input{listings-stata.tex}
+\usetheme{Amsterdam}
+\usepackage{fontspec}
+\setsansfont{Gill Sans MT}
+\begin{document}
+
+\begin{frame}[fragile]
+\begin{large}
+    Contexte : \newline \pause
+\end{large}
+
+\begin{itemize}
+    \item Avertir Drupal
+\end{itemize}
+\begin{lstlisting}
+sysuse auto
+graph box price,by(foreign)
+local karthik price mpg weight
+tab price,by(foreign)
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\texttt{This is a monotext and commonly used to display source code\\
+		    sysuse auto \\
+		    graph box price,by(foreign)}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\begin{lstlisting}
+twoway scatter price mpg
+regress price mpg if rep78==4
+\end{lstlisting} 
+This line above makes sure that the code that is used is quite flexible and can be used for more than useful separation while preparing complicated documents. However the following code makes it quite likely to not work
+\begin{lstlisting}
+foreach var in `cont' {
+    graph box `var'
+}
+\end{lstlisting}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile] 
+	\frametitle{This is the title of a code listing}
+\begin{lstlisting}[frame=shadowbox, rulesepcolor=\color{gray}]
+describe auto
+summarize auto		
+\end{lstlisting}
+\bigskip
+We can easily use the mt code to ensure how this works and perhaps change the word forever.
+\end{frame}
+\end{document}
